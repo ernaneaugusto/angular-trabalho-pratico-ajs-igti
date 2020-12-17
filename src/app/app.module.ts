@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './components/layout/layout.module';
 import { HomeModule } from './pages/home/home.module';
+import { UsersModule } from './pages/products/users.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    HomeModule
+    HomeModule,
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
