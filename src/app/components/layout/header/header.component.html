@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark info-color" id="navbar-site">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['/']" title="Ir para Home">
         <img class="img-logo" src="https://1.bp.blogspot.com/-CpOVQnk_nE0/WDbFz6J2JfI/AAAAAAAAGZk/SZKGIqr1TZgNZiMBoHKnh--r9xDV5RMkACLcB/s1600/angularjs-development-services.png" alt="Logo Angular" title="Ir para Home" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite"
@@ -8,19 +8,19 @@
     </button>
     <div class="collapse navbar-collapse text-center text-lg-left" id="navbarSite">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Produtos</a>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/produtos']">Produtos</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link btn btn-primary" href="#">Sign In</a>
+                <a class="nav-link btn btn-primary" [routerLink]="['/entrar']">Sign In</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-danger" href="#">Sign Out</a>
+                <a class="nav-link btn btn-danger" [routerLink]="['/registrar']">Sign Up</a>
             </li>
         </ul>
     </div>
