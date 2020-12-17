@@ -1,0 +1,28 @@
+<main class="container">
+    <section class="row mt-5">
+        <div class="col-12 p-5 card">
+            <h1 class="lead mb-4">Acesse sua conta:</h1>
+
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Seu e-mail" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputSenha" class="col-sm-2 col-form-label">Senha</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputSenha" placeholder="Senha" />
+                    </div>
+                </div>
+                <div class="form-group row text-right">
+                    <div class="col">
+                        <a [routerLink]="['/registrar']" class="btn btn-white text-dark">Criar conta</a>
+                        <button type="submit" class="btn btn-info">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>

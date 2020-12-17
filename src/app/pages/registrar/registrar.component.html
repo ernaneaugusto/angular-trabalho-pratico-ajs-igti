@@ -1,0 +1,46 @@
+<main class="container">
+    <section class="row mt-5">
+        <div class="col-12 p-5 card">
+            <h1 class="lead mb-4">Cadastre-se:</h1>
+
+            <form>
+                <div class="form-group row">
+                    <label for="inputNome" class="col-sm-2 col-form-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputNome" placeholder="Qual seu nome?" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Seu e-mail" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputConfirmarEmail" class="col-sm-2 col-form-label">Confirmar e-mail</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputConfirmarEmail" placeholder="Confirme seu e-mail" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputSenha" class="col-sm-2 col-form-label">Senha</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputSenha" placeholder="Senha" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputConfirmarSenha" class="col-sm-2 col-form-label">Confirmar senha</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputConfirmarSenha" placeholder="Confirmar senha" />
+                    </div>
+                </div>
+                <div class="form-group row text-right">
+                    <div class="col">
+                        <a [routerLink]="['/entrar']" class="btn btn-white text-dark">Fazer login</a>
+                        <button type="submit" class="btn btn-info">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>

@@ -9,6 +9,14 @@ const routes: Routes = [
   {
     path: 'produtos',
     loadChildren: () => import('./pages/products/users.module').then(users => users.UsersModule)
+  },
+  {
+    path: 'registrar',
+    loadChildren: () => import('./pages/registrar/registrar.module').then(registrar => registrar.RegistrarModule)
+  },
+  {
+    path: 'entrar',
+    loadChildren: () => import('./pages/login/login.module').then(login => login.LoginModule)
   }
 ];
 
