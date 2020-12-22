@@ -1,1 +1,11 @@
-{}
+{
+  "users": [
+    {
+      "inputNome": "ernane",
+      "inputEmail": "teste@gmail.com",
+      "inputConfirmarEmail": "teste@gmail.com",
+      "inputSenha": "212121",
+      "id": 1
+    }
+  ]
+}
