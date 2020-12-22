@@ -11,20 +11,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>email@email221.com</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>email@email31.com</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>email@email43231.com</td>
+                <tr *ngFor="let user of users">
+                    <th scope="row">{{user.id}}</th>
+                    <td>{{user.nome}}</td>
+                    <td>{{user.email}}</td>
                 </tr>
             </tbody>
         </table>

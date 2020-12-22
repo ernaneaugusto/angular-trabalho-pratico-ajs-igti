@@ -13,4 +13,8 @@ export class ServicesService {
   public setUser(formData): Observable<any> {
     return this.http.post(`${URL_API.baseUrl}/${URL_API.users}`, formData);
   }
+  
+  public getUsers(): Observable<any> {
+    return this.http.get(`${URL_API.baseUrl}/${URL_API.users}`);
+  }
 }
