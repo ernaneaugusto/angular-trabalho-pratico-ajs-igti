@@ -56,8 +56,8 @@ export class LoginComponent implements OnInit {
     const userForm = this.form.value;
 
     userFound = usersDataApi.find((user, id) => {
-      return userForm.inputEmail === usersDataApi[id].inputEmail
-        && userForm.inputSenha === usersDataApi[id].inputSenha
+      return userForm.inputEmail === user.inputEmail
+        && userForm.inputSenha === user.inputSenha
     });
 
     user = userFound ? new UserModel(userFound) : null;
