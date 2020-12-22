@@ -2,23 +2,25 @@
     <div class="col-12 p-5 card">
         <h1 class="lead mb-4">Acesse sua conta:</h1>
 
-        <form>
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
             <div class="form-group row">
                 <label for="inputEmail" class="col-lg-2 col-form-label">E-mail</label>
                 <div class="col-lg-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Seu e-mail" />
+                    <input type="email" class="form-control" formControlName="inputEmail" id="inputEmail" placeholder="Seu e-mail" />
+                    <span class="text-danger" *ngIf="form.get('inputEmail').getError('required') && form.get('inputEmail').touched">Campo obrigatório</span>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputSenha" class="col-lg-2 col-form-label">Senha</label>
                 <div class="col-lg-10">
-                    <input type="email" class="form-control" id="inputSenha" placeholder="Senha" />
+                    <input type="password" class="form-control" formControlName="inputSenha" id="inputSenha" placeholder="Senha" />
+                    <span class="text-danger" *ngIf="form.get('inputSenha').getError('required') && form.get('inputSenha').touched">Campo obrigatório</span>
                 </div>
             </div>
             <div class="form-group row text-right">
                 <div class="col">
                     <a [routerLink]="['/registrar']" class="btn btn-white text-dark">Criar conta</a>
-                    <button type="submit" class="btn btn-info">Entrar</button>
+                    <button type="submit" class="btn btn-info" [disabled]="form.invalid">Entrar</button>
                 </div>
             </div>
         </form>

@@ -2,43 +2,43 @@
     <div class="col-12 p-5 card">
         <h1 class="lead mb-4">Cadastre-se:</h1>
 
-        <form>
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
             <div class="form-group row">
                 <label for="inputNome" class="col-lg-2 col-12 col-form-label">Nome</label>
                 <div class="col-lg-10 col-12">
-                    <input type="text" class="form-control" id="inputNome" placeholder="Qual seu nome?" />
+                    <input type="text" class="form-control" formControlName="inputNome" id="inputNome" placeholder="Qual seu nome?" />
+                    <span class="text-danger" *ngIf="form.get('inputNome').getError('required') && form.get('inputNome').touched">Campo
+                        obrigatório</span>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputEmail" class="col-lg-2 col-form-label">E-mail</label>
                 <div class="col-lg-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Seu e-mail" />
+                    <input type="email" class="form-control" formControlName="inputEmail" id="inputEmail" placeholder="Seu e-mail" />
+                    <span class="text-danger" *ngIf="form.get('inputEmail').getError('required') && form.get('inputEmail').touched">Campo
+                        obrigatório</span>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputConfirmarEmail" class="col-lg-2 col-form-label">Confirmar e-mail</label>
                 <div class="col-lg-10">
-                    <input type="email" class="form-control" id="inputConfirmarEmail"
+                    <input type="email" class="form-control" formControlName="inputConfirmarEmail" id="inputConfirmarEmail"
                         placeholder="Confirme seu e-mail" />
+                        <span class="text-danger" *ngIf="form.get('inputConfirmarEmail').getError('required') && form.get('inputConfirmarEmail').touched">Campo
+                            obrigatório</span>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputSenha" class="col-lg-2 col-form-label">Senha</label>
                 <div class="col-lg-10">
-                    <input type="password" class="form-control" id="inputSenha" placeholder="Senha" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="inputConfirmarSenha" class="col-lg-2 col-form-label">Confirmar senha</label>
-                <div class="col-lg-10">
-                    <input type="password" class="form-control" id="inputConfirmarSenha"
-                        placeholder="Confirmar senha" />
+                    <input type="password" class="form-control" formControlName="inputSenha" id="inputSenha" placeholder="Senha" />
+                    <span class="text-danger" *ngIf="form.get('inputSenha').getError('required') && form.get('inputSenha').touched">Campo obrigatório com no mínimo 6 caracteres</span>
                 </div>
             </div>
             <div class="form-group row text-right">
                 <div class="col">
                     <a [routerLink]="['/entrar']" class="btn btn-white text-dark">Fazer login</a>
-                    <button type="submit" class="btn btn-info">Cadastrar</button>
+                    <button type="submit" class="btn btn-info" [disabled]="form.invalid">Cadastrar</button>
                 </div>
             </div>
         </form>

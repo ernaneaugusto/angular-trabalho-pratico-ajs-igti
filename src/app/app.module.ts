@@ -7,6 +7,7 @@ import { LayoutModule } from './components/layout/layout.module';
 import { HomeModule } from './pages/home/home.module';
 import { UsersModule } from './pages/products/users.module';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { RegistrarComponent } from './pages/registrar/registrar.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     LayoutModule,
     HomeModule,
